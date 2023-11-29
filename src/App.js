@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { Link } from "react-router-dom";
+import Layout from "./components/layout/layout";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout>
+      <div className="App bg-intro-wallpaper bg-no-repeat bg-center bg-cover h-screen">
+        <div className="flex flex-col items-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 border-black border-4 p-10 bg-blue-400 rounded-sm">
+          <h1 className="text-xl">
+            Perrotin Alexis, Développeur web et web mobile
+          </h1>
+          <button className="border-black border-2 rounded-md mt-4 p-1 hover:bg-blue-500">
+            <Link to="/a-propos">En savoir plus</Link>
+          </button>
+        </div>
+      </div>
+    </Layout>
   );
 }
 
